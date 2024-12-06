@@ -8,7 +8,6 @@ create_tables()
 # Função main
 def main():
     # Definir a variável que vai recolher a escolha do utilizador para o segundo menu
-    sub_choice = 0
     # Loop para repetir infinitamente
     while True:
         # Recolher a escolha do utilizador para o primeiro menu
@@ -17,6 +16,7 @@ def main():
         match choice:
             # Caso choice seja 1 ou 2 ou 3 ou 4, o programa abre o segundo menu
             case 1 | 2 | 3 | 4:
+                sub_choice = 0
                 # Enquanto sub_choice != 4, executar o segundo menu
                 while sub_choice != 4:
                     # Recolher o valor do segundo menu
