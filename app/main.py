@@ -32,6 +32,10 @@ def main():
                                     match sub_choice:
                                         case 1:
                                             create_alunos()
+                                        case 2:
+                                            create_professor()
+                                        case 3:
+                                            create_turma()
                                 case 2: 
                                     match sub_choice:
                                         case 1:
@@ -41,9 +45,13 @@ def main():
                                         case 3:
                                             read_turmas()
                                 case 3:
-                                    break
+                                    match sub_choice:
+                                        case 1:
+                                            delete_aluno()
                                 case 4:
-                                    break
+                                    match sub_choice:
+                                        case 1:
+                                            break
                         case 4:
                             break
                         # Caso a opção não seja válida

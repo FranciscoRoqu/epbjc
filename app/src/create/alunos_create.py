@@ -35,12 +35,12 @@ def create_alunos():
     #     # print(nome)
     #     cursor.execute("INSERT INTO Alunos(nome,idade) VALUES(?,?)", (nome, random.randint(16,20)))
 
-    nome = input("Insira o nome da turma: ")
-    choice = input("Deseja introduzir um aluno ou um professor?\n=> ").lower()
+    nome = input("Insira o nome do aluno: ")
+    choice = input("Deseja introduzir a idade do aluno?\n=> ").lower()
     match choice:
-        case "aluno" | "a":
-            id_aluno = int(input("Introduza o id do aluno: "))
-        case "professor" | "p":
-            id_professor = int(input("Introduza o id do professor: "))
-            cursor.execute(f"INSERT INTO (nome) VALUES('{nome}')")
+        case "s" | "sim":
+            idade = int(input("Introduza a idade do aluno: "))
+            cursor.execute("INSERT INTO Alunos(nome,idade) VALUES(?,?)", (nome,idade))
+        case "n" | "não":
+            cursor.execute(f"INSERT INTO Alunos(nome) VALUES('{nome}')")
     commit()

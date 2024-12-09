@@ -4,12 +4,14 @@ def create_turma():
 
     cursor = cursor()
 
-    nome = input("Insira o nome do aluno: ")
-    choice = input("Deseja introduzir a idade do aluno?\n=> ").lower()
+    nome = input("Insira o nome da turma: ")
+    choice = input("Deseja introduzir um A (Aluno) ou um P (Professor), N (Introduzir nenhum)?\n=> ").lower()
     match choice:
-        case "s" | "sim":
-            idade = int(input("Introduza a idade do aluno: "))
-            cursor.execute("INSERT INTO Alunos(nome,idade) VALUES(?,?)", (nome,idade))
-        case "n" | "não":
-            cursor.execute(f"INSERT INTO Alunos(nome) VALUES('{nome}')")
+        case "aluno" | "a":
+            id_aluno = int(input("Introduza o id do aluno: "))
+        case "professor" | "p":
+            id_professor = int(input("Introduza o id do professor: "))
+            cursor.execute(f"INSERT INTO (nome) VALUES('{nome}')")
+        case "nenhum" | "n":
+            cursor.execute(f"INSERT INTO Turmas(nome) VALUES('{nome}')")
     commit()
