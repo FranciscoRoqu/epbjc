@@ -48,6 +48,10 @@ def main():
                                     match sub_choice:
                                         case 1:
                                             delete_aluno()
+                                        case 2:
+                                            delete_professor()
+                                        case 3:
+                                            delete_turma()
                                 case 4:
                                     match sub_choice:
                                         case 1:

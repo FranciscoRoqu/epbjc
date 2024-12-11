@@ -1,11 +1,11 @@
 def read_professores():
     from src.connection import cursor
-
-    cursor().execute('''
+    cursor = cursor()
+    cursor.execute('''
                     SELECT * FROM Professores
                     ''')
     
-    resultados = cursor().fetchall()
+    resultados = cursor.fetchall()
 
     
     for resultado in resultados:

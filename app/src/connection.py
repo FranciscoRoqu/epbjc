@@ -6,7 +6,7 @@ conexao = sqlite3.connect("../sqliteDatabase/epbjc.db")
 
 # Imprimir o número de elemento na tabela alunos
 # só que sem variáveis
-print(len(sqlite3.connect("../sqliteDatabase/epbjc.db").cursor().execute("SELECT * FROM alunos").fetchall()))
+# print(len(sqlite3.connect("../sqliteDatabase/epbjc.db").cursor().execute("SELECT * FROM alunos").fetchall()))
 
 # Definir a função para criar o cursor
 def cursor():

@@ -24,7 +24,7 @@ def create_tables():
                         id_alunos      INTEGER,
                         id_professores INTEGER,
                      
-                        FOREIGN KEY(id_alunos)       REFERENCES Alunos(id)
+                        FOREIGN KEY(id_alunos)       REFERENCES Alunos(id) 
                         FOREIGN KEY(id_professores)  REFERENCES Professores(id)
                    )
                     ''')
